@@ -16,10 +16,15 @@ my tool for parsing the file and the lessons I learned about the format.
 3. The PowerPC Macintosh computers for which the Pangea Software games and the
    BG3D file format were developed were big endian, so conversion is needed in
    the code.
+4. Later versions of bg3d, or at least the example models packaged with the
+   book, have a slightly different format to the models packaged with Otto
+   Matic.
    
 ## TODOs ##
 
-1. Finish the tool for reporting all the information for every tag.
-2. Make a tool for converting the BG3D files to an open, more supported file
+1. DONE Finish the tool for reporting all the information for every tag.
+2. DONE Make tool conform to the multiple bg3d versions seen so far.
+3. Make a tool for converting the BG3D files to an open, more supported file
    format.
-3. Maybe add tools for exporting the textures and meshes seperately.
+4. Maybe add tools for exporting the textures and meshes seperately.
+

@@ -1,6 +1,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#define OTTOMATIC
+
 typedef struct {
   char headerString[16];
   uint32_t version;
@@ -8,14 +10,26 @@ typedef struct {
 
 typedef struct {
   uint32_t width, height;
+#ifdef OTTOMATIC
+  uint32_t unknwn1, unknwn2;
+#endif // OTTOMATIC
   uint32_t bufferSize;
+#ifdef OTTOMATIC
+  char unknwn3[16];
+#endif // OTTOMATIC
 } BG3DTextureHeader;
 
 typedef struct {
   uint32_t materialNum;
   uint32_t flags;
+#ifdef OTTOMATIC
+  char unknwn1[20];
+#endif // OTTOMATIC
   uint32_t numPoints;
   uint32_t numTriangles;
+#ifdef OTTOMATIC
+  char unknwn2[16];
+#endif // OTTOMATIC
 } BG3DMeshHeader;
 
 enum {
