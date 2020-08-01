@@ -1,7 +1,0 @@
-* Beginning of stuff
-** 0x00000059
-* End of stuff
-** 0x0000e37f
-* Bytes of stuff
-** 0x0000e37f - 0x00000059 = 0x0000e326 = 58150
-** (/ 58150 8 3) = 4845 pts = 0x12ed
