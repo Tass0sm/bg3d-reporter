@@ -1,5 +1,15 @@
 #include <stdint.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+
+#include <endian.h>
+#include <json-c/json_object.h>
+
+#include "common.c"
+
+#define BMPH_IMPLEMENTATION
+#include "bmph.h"
 
 #define OTTOMATIC
 

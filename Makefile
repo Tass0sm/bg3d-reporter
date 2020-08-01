@@ -1,8 +1,8 @@
 CC=gcc
-CFLAGS=-Wall
+CFLAGS=-Wall -ljson-c -lm
 
-viewer: src/main.c
-	$(CC) $(CFLAGS) src/main.c -o reporter
+tool: src/main.c src/bg3d.c src/arg.c
+	$(CC) $(CFLAGS) src/main.c -o tool
 
-clean: reporter
-	rm -f reporter
+clean: tool
+	rm -f tool
