@@ -197,6 +197,7 @@ void readMaterialTextureMap (FILE * pFile) {
 		printf("%8lx: %u (width)\n", pos, header.width);
 		printf("%8lx: %u (height)\n", pos + 4, header.height);
 		printf("%8lx: 0x%x (size)\n", pos + 8, header.bufferSize);
+		printf("%8lx: Beginning of Texture Data\n", pos + result);
 	}
 
 	count = header.bufferSize;
@@ -262,6 +263,16 @@ BG3DMeshHeader * readNewMesh (FILE * pFile) {
 		printf("%8lx: %u (flags)\n", pos + 4, geoHeader->flags);
 		printf("%8lx: %u (numPoints)\n", pos + 8, geoHeader->numPoints);
 		printf("%8lx: %u (numTriangles)\n", pos + 12, geoHeader->numTriangles);
+	}
+
+	if (argState & 2) {
+		extern json_object * outputJSON;
+
+		json_object * buffers = json_object_new_array();
+		json_object * currentBuffer = json_object_new_object();
+
+		json_object_object_add(asset, "version", version);
+		json_object_object_add(outputJSON, "asset", asset);
 	}
 
 	return geoHeader;

@@ -21,6 +21,7 @@ int main(int argc, char *argv[]) {
 	fclose(pFile);
 
 	extern uint8_t argState;
+
 	if (argState & 2) {
 		// get json string
 		extern json_object * outputJSON;
